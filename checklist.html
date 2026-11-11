@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shipper Checklist | H4 Solutions Shipper Guide</title>
+  <meta name="description" content="A tick-box checklist for first-time shippers, with a documents guide.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="checklist">
+  <a href="#main" class="no-print" style="position:absolute;left:-9999px" onfocus="this.style.left='8px'">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+  <section class="page-hero"><div class="wrap"><div class="crumb">Checklist</div><h1>Your first-time shipper checklist</h1><p>Tick each step as you go. Your progress is saved on this device, and you can print it or download a copy.</p></div></section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cl-top">
+          <div class="cl-progress" id="cl-progress"></div>
+          <div class="cl-controls no-print">
+            <button class="btn btn-ghost" id="cl-print">Print</button>
+            <button class="btn btn-ghost" id="cl-download">Download as text</button>
+            <button class="btn btn-ghost" id="cl-reset">Reset</button>
+          </div>
+        </div>
+        <div class="chip-row no-print" id="cl-tabs" role="group" aria-label="Checklist type"></div>
+        <div id="cl-list"></div>
+      </div>
+    </section>
+    <section class="section alt" id="documents">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Paperwork</span><h2>Documents at a glance</h2><p>Descriptions, weights, and receiver details must match on every document. Not every document applies to every shipment.</p></div>
+        <div class="table-wrap"><table id="doc-table"></table></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

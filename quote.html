@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Quote | H4 Solutions Shipper Guide</title>
+  <meta name="description" content="Request a quote for shipping cargo by air from South America through Barbados.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="quote">
+  <a href="#main" class="no-print" style="position:absolute;left:-9999px" onfocus="this.style.left='8px'">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+  <section class="page-hero"><div class="wrap"><div class="crumb">Request a quote</div><h1>Get your quote</h1><p>Send us the details of your shipment. Prices are based on weight and special handling.</p></div></section>
+
+    <section class="section">
+      <div class="wrap split" style="align-items:start">
+        <div>
+          <span class="eyebrow">Get a quote</span>
+          <h2>Tell us about your cargo</h2>
+          <p>Pricing is based on weight, with additional charges for special handling. Prices aren't listed online, so send us the details and we'll reply with a quote.</p>
+          <div class="callout blue"><p><strong>Before you send:</strong> check that your cargo isn't <a href="cargo.html#restricted">restricted or prohibited</a>, and think about which <a href="schedules.html">flight day</a> suits you.</p></div>
+          <div class="card" id="booking-note" style="margin-top:18px"></div>
+        </div>
+        <div>
+          <div id="quote-result" aria-live="polite"></div>
+          <form id="quote-form" class="card">
+            <div class="form-grid">
+              <div><label class="lbl" for="fullName">Full name *</label><input type="text" id="fullName" name="fullName" required autocomplete="name"></div>
+              <div><label class="lbl" for="company">Company</label><input type="text" id="company" name="company" autocomplete="organization"></div>
+              <div><label class="lbl" for="email">Email *</label><input type="email" id="email" name="email" required autocomplete="email"></div>
+              <div><label class="lbl" for="phone">Phone</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+              <div><label class="lbl" for="origin">Origin *</label><select id="origin" name="origin" required><option value="">Choose&hellip;</option><option>Guyana</option><option>Brazil</option><option>Another country (Panama, Venezuela, and Suriname are planned)</option></select></div>
+              <div><label class="lbl" for="destination">Destination *</label><select id="destination" name="destination" required><option value="">Choose&hellip;</option><option>Saint Lucia</option><option>Another destination</option></select></div>
+              <div><label class="lbl" for="cargoType">Cargo type *</label><select id="cargoType" name="cargoType" required><option value="">Choose&hellip;</option><option>Fresh produce</option><option>Fresh seafood or meat</option><option>Frozen products</option><option>Dry or canned food</option><option>Other packaged goods</option><option>Something else</option></select></div>
+              <div><label class="lbl" for="tempControl">Temperature control needed?</label><select id="tempControl" name="tempControl"><option value="">Choose&hellip;</option><option>No</option><option>Yes, chilled</option><option>Yes, frozen</option><option>Not sure</option></select></div>
+              <div><label class="lbl" for="weight">Approximate weight</label><select id="weight" name="weight"><option value="">Choose&hellip;</option><option>Under 100 lb</option><option>100–500 lb</option><option>500–5,000 lb</option><option>5,000–15,000 lb</option><option>Over 15,000 lb</option><option>Not sure</option></select></div>
+              <div><label class="lbl" for="packages">Number of packages</label><input type="number" id="packages" name="packages" min="1"></div>
+              <div><label class="lbl" for="readyDate">Cargo ready by</label><input type="date" id="readyDate" name="readyDate"></div>
+              <div class="checkrow" style="align-self:end;padding-bottom:12px"><input type="checkbox" id="dryIce" name="dryIce"><label for="dryIce">I plan to use dry ice. I understand it must be declared in advance.</label></div>
+              <div class="full"><label class="lbl" for="handling">Storage or special handling needs</label><textarea id="handling" name="handling" rows="3"></textarea></div>
+              <div class="full"><label class="lbl" for="notes">Anything else we should know?</label><textarea id="notes" name="notes" rows="3"></textarea></div>
+              <div class="full checkrow"><input type="checkbox" id="confirm" name="confirm" required><label for="confirm">My cargo is not electronics and is not in a prohibited or restricted category. *</label></div>
+              <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="full"><button class="btn btn-gold" type="submit">Request my quote &rarr;</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

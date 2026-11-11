@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Journey | H4 Solutions Shipper Guide</title>
+  <meta name="description" content="Follow your shipment through five stages, from cargo preparation to final delivery.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="journey">
+  <a href="#main" class="no-print" style="position:absolute;left:-9999px" onfocus="this.style.left='8px'">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+  <section class="page-hero"><div class="wrap"><div class="crumb">The journey</div><h1>From first inquiry to delivery</h1><p>Five stages. Select any stage to see what needs to happen, who is responsible, what you need, and what could go wrong.</p></div></section>
+
+    <section class="section">
+      <div class="wrap">
+        <div id="journey-app" aria-live="polite"></div>
+      </div>
+    </section>
+    <section class="section alt" id="process-map">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">The full picture</span><h2>The process map: who does what, and when</h2><p>Each row is one party. Each column is one stage. Select a stage heading to jump to its details.</p></div>
+        <div class="lane-wrap" tabindex="0" aria-label="Process map, scrollable"><div class="lanes" id="lanes"></div></div>
+        <div class="lane-legend"><span><span class="chip">Step</span>A task someone completes</span><span><span class="chip check">Checkpoint?</span>A point where cargo is held until the issue is fixed</span></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cargo Rules | H4 Solutions Shipper Guide</title>
+  <meta name="description" content="Packaging, labeling, dry ice, and what can and can't be shipped.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="cargo">
+  <a href="#main" class="no-print" style="position:absolute;left:-9999px" onfocus="this.style.left='8px'">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+  <section class="page-hero"><div class="wrap"><div class="crumb">Cargo rules</div><h1>What you can ship, and how to pack it</h1><p>Packaging, labels, temperature, dry ice, and the products we can't accept.</p></div></section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Packing and handling</span><h2>Rules for your cargo</h2><p>Choose your cargo type to see what applies to you.</p></div>
+        <div class="chip-row" id="cargo-filters" role="group" aria-label="Filter by cargo type"></div>
+        <div class="grid g2" id="cargo-grid"></div>
+      </div>
+    </section>
+    <section class="section alt" id="checker">
+      <div class="wrap">
+        <div class="card checker">
+          <div><span class="eyebrow">Product checker</span><h2>Can I ship it?</h2><p>Choose your product to see whether it can be accepted.</p>
+            <label class="lbl" for="checker-select">Your product</label><select id="checker-select"></select></div>
+          <div id="checker-result" aria-live="polite"><p class="muted">Your result will appear here.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="restricted">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Prohibited and restricted cargo</span><h2>What can't go as ordinary cargo</h2></div>
+        <div class="callout red"><p><strong>Not accepted:</strong> electronics are not accepted under the initial service.</p></div>
+        <p>The categories below are <strong>not ordinary cargo</strong>. Acceptance depends on the applicable regulations and on the carrier's authorization and restrictions. We use U.S. FAA cargo guidance as a reference. <span class="ph">The final rules for our routes and carrier are to be confirmed</span>.</p>
+        <div class="restricted-grid" id="restricted-grid"></div>
+        <div class="callout" style="margin-top:28px"><p><strong>Dry ice</strong> must be declared in advance. Acceptance depends on carrier approval and on packaging, marking, labeling, and quantity requirements.</p></div>
+        <p class="no-print"><button class="btn btn-ghost" onclick="window.print()">Print this page</button></p>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
