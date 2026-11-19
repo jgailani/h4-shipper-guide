@@ -333,19 +333,29 @@ window.CONTENT = {
       { id: "h5", text: "Contact details for shipment questions saved. {{Call center contact}}" }
     ] }
   ],
-  documents: [
-    ["Commercial invoice", "Identifies the goods, their value, and the parties involved", "Shipper"],
-    ["Packing list", "What is in each package: quantities, weights, and dimensions", "Shipper"],
-    ["Air waybill (AWB)", "Records the shipment details and the air transport arrangement", "Prepared during processing, generally by the airline or a forwarder, and verified at acceptance"],
-    ["Cargo manifest", "Lists the cargo carried on the flight", "Airline"],
-    ["Export declaration", "Customs information for the country the cargo is leaving", "Shipper, forwarder, or customs broker"],
-    ["Import declaration", "Customs information for the destination country", "Receiver or customs broker"],
-    ["Certificate of origin (when required)", "Shows where the goods originated", "Shipper"],
-    ["Product certificates or permits", "None identified so far for ordinary food cargo. {{Commodity-specific requirements to be confirmed}}", "Shipper"],
-    ["Labels and regulatory markings", "Your own labels are fine. Required regulatory markings must also be provided", "Shipper"],
-    ["Additional documents", "{{Additional required shipper documents to be confirmed}}", "\u2014"]
+    documents: [
+    ["Commercial invoice", "Identifies the goods, their value, and the parties involved", "Shipper",
+      [{ label: "Sample template (PDF)", url: "https://www.df-alliance.com/download/Resources/FreightTemplates/commercial_invoice.pdf", type: "pdf", note: "Sample only" }]],
+    ["Packing list", "What is in each package: quantities, weights, and dimensions", "Shipper",
+      [{ label: "Sample template (PDF)", url: "https://www.df-alliance.com/download/Resources/FreightTemplates/packing_list.pdf", type: "pdf", note: "Sample only" }]],
+    ["Air waybill (AWB)", "Records the shipment details and the air transport arrangement", "Prepared during processing, generally by the airline or a forwarder, and verified at acceptance",
+      [{ label: "Guide: how an air waybill works (IATA)", url: "https://www.iata.org/en/publications/newsletters/iata-knowledge-hub/air-cargo-tariffs-and-rules-what-you-need-to-know/", type: "link" }]],
+    ["Cargo manifest", "Lists the cargo carried on the flight", "Airline", []],
+    ["Export declaration", "Customs information for the country the cargo is leaving", "Shipper, forwarder, or customs broker",
+      [{ label: "Barbados customs e-declaration portal", url: "https://asycuda.customs.gov.bb/portal/login.jsf", type: "link", note: "Login required" },
+       { label: "Barbados declaration instructions (PDF)", url: "https://asycuda.customs.gov.bb/documents/DeclarationProcedureSop.pdf", type: "pdf" }]],
+    ["Import declaration", "Customs information for the destination country", "Receiver or customs broker",
+      [{ label: "Barbados customs e-declaration portal", url: "https://asycuda.customs.gov.bb/portal/login.jsf", type: "link", note: "Login required" },
+       { label: "Barbados broker manual (PDF)", url: "https://asycuda.customs.gov.bb/files/BROKER%20MANUAL.docx.pdf", type: "pdf" }]],
+    ["Certificate of origin (when required)", "Shows where the goods originated", "Shipper",
+      [{ label: "Sample template (PDF)", url: "https://www.smartsheet.com/sites/default/files/IC-Certificate-of-Origin-Form-9308_PDF.pdf", type: "pdf", note: "Sample only. Official certificates are issued by an authority" }]],
+    ["Product certificates or permits", "None identified so far for ordinary food cargo. {{Commodity-specific requirements to be confirmed}}", "Shipper",
+      [{ label: "Barbados import requirements guide", url: "https://tradeportal.thecommonwealth.org/caribbean-and-americas/barbados", type: "link" },
+       { label: "Barbados prohibited and restricted list (PDF)", url: "https://oag.gov.bb/attachments/Customs%20%28List%20of%20Prohibited%20and%20Restricted%20Imports%20and%20Exports%29%20Order%2C%202009-SI%20No.%20127.pdf", type: "pdf" }]],
+    ["Labels and regulatory markings", "Your own labels are fine. Required regulatory markings must also be provided", "Shipper",
+      [{ label: "General export documents guidance (U.S. Trade.gov)", url: "https://www.trade.gov/common-export-documents", type: "link" }]],
+    ["Additional documents", "{{Additional required shipper documents to be confirmed}}", "\u2014", []]
   ],
-
   /* ---------- Common mistakes ---------- */
   mistakes: [
     { tag: "Planning", stage: 2, title: "Not planning inventory around flights", what: "Products wait for a flight and spoil. This is the most common problem for new shippers.", fix: "Plan harvest, catch, or production around flight days, and book capacity early." },
