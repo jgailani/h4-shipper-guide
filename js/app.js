@@ -348,8 +348,7 @@
     $("#cl-print").addEventListener("click", function () { window.print(); });
     $("#cl-download").addEventListener("click", downloadChecklist);
     $("#cl-reset").addEventListener("click", function () { if (confirm("Clear all ticked boxes?")) { st = {}; try { localStorage.removeItem(KEY); } catch (x) { } draw(); } });
-    $("#doc-table").innerHTML = "<thead><tr><th>Document</th><th>What it is used for</th><th>Usually provided by</th></tr></thead><tbody>" + C.documents.map(function (d) { return "<tr><td><strong>" + d[0] + "</strong></td><td>" + ph(d[1]) + "</td><td>" + ph(d[2]) + "</td></tr>"; }).join("") + "</tbody>";
-    draw();
+    $("#doc-table").innerHTML = "<thead><tr><th>Document</th><th>What it is used for</th><th>Usually provided by</th><th>Get it or learn more</th></tr></thead><tbody>" + C.documents.map(function (d) { var links = (d[3] || []).map(function (l) { return '<a href="' + l.url + '" target="_blank" rel="noopener" aria-label="' + l.label + ' (opens in a new tab)" style="display:flex;align-items:center;gap:6px;font-weight:600;text-decoration:none;margin-top:4px">' + icon(l.type === "pdf" ? "download" : "arrow-right") + "<span>" + l.label + "</span></a>" + (l.note ? '<span class="small muted" style="display:block;margin:0 0 6px 26px">' + l.note + "</span>" : ""); }).join(""); return "<tr><td><strong>" + d[0] + "</strong></td><td>" + ph(d[1]) + "</td><td>" + ph(d[2]) + "</td><td>" + (links || '<span class="muted">\u2014</span>') + "</td></tr>"; }).join("") + "</tbody>";    draw();
   }
 
   /* ================= MISTAKES ================= */
